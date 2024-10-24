@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="botao-container">
+        <app-button 
+            (onClick)="onClickPadrao()" 
+            [color]="'white'">
+            Botão Padrão
+        </app-button>
+        <app-button 
+            (onClick)="onClickPadrao()" 
+            [color]="'black'">
+            Botão Padrão
+        </app-button>
+    </div>
+    <div class="botao-container">
+        <button 
+            mat-flat-button 
+            class="button-material-component"
+            (click)="onClickMaterial()">
+            Botão Material
+        </button>
+        <button 
+            mat-stroked-button
+            class="button-material-component"
+            (click)="onClickMaterial()">
+            Botão Material
+        </button>
+    </div>
+</div>

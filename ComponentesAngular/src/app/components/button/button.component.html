@@ -1,0 +1,9 @@
+<button 
+    class="button-component" 
+    (click)="handleClick()" 
+    [style.background-color]="color"
+    [style.color]="color === 'black' ? 'white' : 'black'"
+    >
+    <ng-content></ng-content>
+  </button>
+  

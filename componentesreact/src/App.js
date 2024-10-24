@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import ButtonComponent from './components/button/button';
+import Button from '@mui/material/Button';
+
 import './App.css';
 
 function App() {
+
+  function handleClickPadrao() {
+    console.log("Botão Padrão Apertado")
+  }
+  function handleClickMaterial() {
+    console.log("Botão Material Apertado")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className='botao-container'>
+        <ButtonComponent color="white" onClick={handleClickPadrao}>Botão Padrão</ButtonComponent>
+        <ButtonComponent color="black" onClick={handleClickPadrao}>Botão Padrão</ButtonComponent>
+      </div>
+      <div className='botao-container'>
+        <Button variant="contained" onClick={handleClickMaterial}>Botão Material</Button>
+        <Button variant="outlined" onClick={handleClickMaterial}>Botão Material</Button>
+      </div>
     </div>
   );
 }
